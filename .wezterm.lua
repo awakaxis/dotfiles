@@ -10,16 +10,16 @@ config.color_scheme = 'GitHub Dark'
 config.font_size = 12
 config.window_background_opacity = 0.85
 config.window_decorations = "NONE | RESIZE"
-config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 
 -- todo more later
 wezterm.on("trigger_preset_layout", function(window, pane)
     local pane2 = pane:split {direction='Right', size=0.45}
-    pane2:send_text("ssh -t awakaxis@192.168.1.15 'screen -dr; exec $SHELL'\n")
+    pane2:send_text("ssh -t awakaxis@192.168.1.15 'screen -dr bot; exec $SHELL'\n")
 
     local pane3 = pane:split {direction='Bottom', size=0.5}
-    pane3:send_text("ssh -t awakaxis@192.168.1.15 'btop; exec $SHELL'\n")
+    pane3:send_text("ssh -t awakaxis@192.168.1.15 'screen -DR monitor; exec $SHELL'\n")
 end)
 
 wezterm.on("gui-startup", function(cmd)
