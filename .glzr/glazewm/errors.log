@@ -1,0 +1,17 @@
+[2m2024-10-30T03:29:56.966779Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'zebar'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-30T09:22:46.436474Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'set WEZTERM_LAUNCH_ARGS=\"nah\";C:\\Program Files\\WezTerm\\wezterm-gui.exe'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-30T09:23:12.813946Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '$env:WEZTERM_LAUNCH_ARGS=\"nah\";C:\\Program Files\\WezTerm\\wezterm-gui.exe'.\n\nError: Program path is not valid for command '$env:WEZTERM_LAUNCH_ARGS=\"nah\";C:\\Program Files\\WezTerm\\wezterm-gui.exe'."
+[2m2024-10-30T09:35:08.182886Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'set WEZTERM_LAUNCH_ARGS=\"nah\"; C:\\Program Files\\WezTerm\\wezterm-gui.exe'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-30T09:36:47.293181Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 237 column 15
+[2m2024-10-30T09:37:36.473674Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 237 column 15
+[2m2024-10-30T09:39:34.927268Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 237 column 15
+[2m2024-10-30T09:40:56.191863Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '$env:WEZTERM_LAUNCH_ARGS=\"nah\"; C:\\Program Files\\WezTerm\\wezterm-gui.exe'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-30T09:57:27.310109Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '$env:WEZTERM_LAUNCH_ARGS=\"nah\"; C:\\Program Files\\WezTerm\\wezterm-gui.exe'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-31T07:42:09.684438Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-16T01:30:45.810370Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-11-16T01:30:50.493054Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-11-16T01:30:51.170815Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-11-16T01:43:25.756024Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
