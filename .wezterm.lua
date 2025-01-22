@@ -16,10 +16,10 @@ config.hide_tab_bar_if_only_one_tab = true
 -- todo more later
 wezterm.on("trigger_preset_layout", function(window, pane)
     local pane2 = pane:split {direction='Right', size=0.45}
-    pane2:send_text("ssh -t awakaxis@192.168.1.15 'screen -dr bot; exec $SHELL'\n")
+    pane2:send_text("ssh -t awakaxis@192.168.1.15 'tmux attach -dt kcord-bot; exec $SHELL'\n")
 
     local pane3 = pane:split {direction='Bottom', size=0.5}
-    pane3:send_text("ssh -t awakaxis@192.168.1.15 'screen -DR monitor; exec $SHELL'\n")
+    pane3:send_text("ssh -t awakaxis@192.168.1.15 'btop; exec $SHELL'\n")
 end)
 
 wezterm.on("gui-startup", function(cmd)
@@ -50,7 +50,8 @@ config.keys = {
     {key="UpArrow", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Up"}},
     {key="DownArrow", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Down"}},
     {key="l", mods="CTRL|SHIFT|ALT", action=wezterm.action.EmitEvent('trigger_preset_layout')},
-    {key="p", mods="ALT", action=wezterm.action.PaneSelect{mode="Activate"}}
+    {key="p", mods="ALT", action=wezterm.action.PaneSelect{mode="Activate"}},
+    {key="w", mods="CTRL", action=wezterm.action.DisableDefaultAssignment}
 }
 
 
