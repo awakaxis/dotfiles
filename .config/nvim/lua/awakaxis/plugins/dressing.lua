@@ -1,1 +1,4 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/dressing.lua
+return {
+    "stevearc/dressing.nvim",
+    even = "VeryLazy"
+}

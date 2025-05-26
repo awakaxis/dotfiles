@@ -1,1 +1,6 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/surround.lua
+return {
+    "kylechui/nvim-surround",
+    event = { "BufReadPre", "BufNewFile" },
+    version = "*",
+    config = true
+}

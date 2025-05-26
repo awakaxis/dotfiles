@@ -1,1 +1,3 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/undotree.lua
+return {
+	"mbbill/undotree",
+}

@@ -1,1 +1,4 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/init.lua
+return {
+    "nvim-lua/plenary.nvim",
+    "christoomey/vim-tmux-navigator",
+}

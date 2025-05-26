@@ -1,1 +1,2 @@
-/home/awakaxis/.config/nvim/init.lua
+require("awakaxis.main")
+require("awakaxis.lazy")

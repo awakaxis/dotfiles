@@ -1,1 +1,3 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/vim-be-good.lua
+return {
+	"ThePrimeagen/vim-be-good",
+}

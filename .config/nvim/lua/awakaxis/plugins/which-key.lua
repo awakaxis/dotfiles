@@ -1,1 +1,11 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/plugins/which-key.lua
+return {
+    "folke/which-key.nvim",
+    even = "VeryLazy",
+    init = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 500
+    end,
+    opts = {
+        -- default conf
+    }
+}

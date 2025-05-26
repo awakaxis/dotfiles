@@ -1,1 +1,2 @@
-/home/awakaxis/.config/nvim/lua/awakaxis/main/init.lua
+require("awakaxis.main.options")
+require("awakaxis.main.keybinds")
