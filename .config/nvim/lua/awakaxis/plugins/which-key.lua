@@ -1,0 +1,1 @@
+/home/awakaxis/.config/nvim/lua/awakaxis/plugins/which-key.lua
