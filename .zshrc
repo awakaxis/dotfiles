@@ -17,7 +17,7 @@ alias wlc='wl-copy'
 alias cls='clear'
 alias rsource='source ~/.zshrc'
 alias venvpy='venv/bin/python'
-alias hyprpicker='hyprpicker | wlc'
+alias hyprpicker='hyprpicker | grep -P "#\w{6}" | wlc'
 
 # vim shortcuts
 alias vim='nvim'
