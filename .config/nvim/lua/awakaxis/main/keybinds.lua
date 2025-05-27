@@ -4,7 +4,7 @@ local map = vim.keymap
 
 -- PICKER
 map.set("n", "<leader>ff", function()
-	require("snacks.picker").files({ exclude = { "Documents/othr" } })
+	require("snacks.picker").files({ exclude = { "Documents/custom" } })
 end, { desc = "Search for file" })
 
 map.set("n", "<leader>fs", function()
