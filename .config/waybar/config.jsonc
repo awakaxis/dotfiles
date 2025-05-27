@@ -8,26 +8,25 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        // "hyprland/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/media"
+        "network",
+        "pulseaudio"
     ],
     "modules-center": [
-        "sway/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
+        // "idle_inhibitor",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
-        "backlight",
+        // "backlight",
         "keyboard-state",
-        "sway/language",
+        "hyprland/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -35,22 +34,22 @@
         "custom/power"
     ],
     // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "misc",
+            "2": "browse",
+            "3": "code",
+            "4": "music",
+            "5": "etc",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

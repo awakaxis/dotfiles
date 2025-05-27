@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  background-color: rgba(43, 48, 59, 0);
+  border-bottom: 3px solid rgba(100, 114, 125, 0);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -54,18 +54,26 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 0 5px;
-  background-color: transparent;
-  color: #ffffff;
+  padding: 0 25;
+  background-color: rgba(239, 235, 217, 0.75);
+  box-shadow: inset 0 -2px rgba(0.16, 16, 0.16, 0.45);
+  color: #292924;
+  border-radius: 5;
 }
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
+  border-radius: 5;
 }
 
 #workspaces button.active {
-  background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+  /* 64727d */
+  background-color: rgba(40, 38, 35, 0.75);
+  /* box-shadow: inset 0 -2px rgba(0.16, 16, 0.16, 0.65); */
+  color: #ffffff;
+  border-radius: 5;
+  /* background-color: rgba(239, 235, 217, 0.65); */
+  /* box-shadow: inset 0 -2px #ffffff; */
 }
 
 #workspaces button.urgent {
@@ -93,9 +101,14 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#language,
 #mpd {
   padding: 0 10px;
-  color: #ffffff;
+  color: #000000;
+  box-shadow: inset 0 -2px rgba(0.16, 16, 0.16, 0.45);
+  /* background-color: rgba(239, 235, 217, 0.65); */
+  background-color: rgba(209, 205, 188, 0.45);
+  border-radius: 5;
 }
 
 #window,
@@ -114,11 +127,9 @@ button:hover {
 }
 
 #clock {
-  background-color: #64727d;
 }
 
 #battery {
-  background-color: #ffffff;
   color: #000000;
 }
 
@@ -170,12 +181,9 @@ label:focus {
 }
 
 #cpu {
-  background-color: #2ecc71;
-  color: #000000;
 }
 
 #memory {
-  background-color: #9b59b6;
 }
 
 #disk {
@@ -187,18 +195,19 @@ label:focus {
 }
 
 #network {
-  background-color: #2980b9;
+  color: #000000;
 }
 
+/*TODO: do disconnected color*/
 #network.disconnected {
   background-color: #f53c3c;
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
   color: #000000;
 }
 
+/*TODO: pulse muted colors*/
 #pulseaudio.muted {
   background-color: #90b1b1;
   color: #2a5c45;
@@ -228,7 +237,6 @@ label:focus {
 }
 
 #temperature {
-  background-color: #f0932b;
 }
 
 #temperature.critical {
@@ -236,7 +244,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: rgba(209, 205, 188, 0.65);
 }
 
 #tray > .passive {
@@ -250,11 +258,11 @@ label:focus {
 
 #idle_inhibitor {
   background-color: #2d3436;
+  color: #ffffff;
 }
 
 #idle_inhibitor.activated {
   background-color: #ecf0f1;
-  color: #2d3436;
 }
 
 #mpd {
@@ -275,8 +283,7 @@ label:focus {
 }
 
 #language {
-  background: #00b093;
-  color: #740864;
+  /* color: #740864; */
   padding: 0 5px;
   margin: 0 5px;
   min-width: 16px;
