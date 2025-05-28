@@ -25,6 +25,7 @@ alias vimconf='cd ~/.config/nvim; vim .'
 alias vimrc='vim ~/.zshrc'
 alias vimhypr='vim ~/.config/hypr/hyprland.conf'
 alias vimte='vim ~/.config/kitty/kitty.conf'
+alias vimdot='cd ~/dotfiles; vim .'
 
 fastfetch
 
