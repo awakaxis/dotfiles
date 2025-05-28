@@ -1,24 +1,24 @@
 window {
-	/*#1e1e2e*/
-    background-color: #111111;
-    border-radius: 8px;
+  background-color: rgba(209, 205, 188, 1);
+  border-radius: 10;
 }
 
 #entry {
-    padding: 10px;
-    font-size: 25px;
+  color: #1a1a1a;
+  padding: 10px;
+  font-size: 25px;
 }
 
 #entry:selected {
-	/*#44475a*/
-    background-color: #212121;
-    color: #f8f8f2;
+  background-color: #282623;
+  color: #f8f8f2;
 }
 
 #input {
-    background-color: #2B2A33;
-    color: #f8f8f2;
-    border: 2px solid #1F1E25;
-    font-size: 20px;
+  background-color: transparent;
+  color: #282623;
+  border: 2px solid #1a1a1a;
+  border-radius: 0;
+  font-family: JetBrainsMonoNerdFont;
+  font-size: 20px;
 }
-
