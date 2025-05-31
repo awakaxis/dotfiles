@@ -108,6 +108,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #language,
+#custom-updates,
 #mpd {
   padding: 0 10px;
   color: #000000;
@@ -115,6 +116,10 @@ button:hover {
   /* background-color: rgba(239, 235, 217, 0.65); */
   background-color: rgba(209, 205, 188, 0.45);
   border-radius: 10;
+}
+
+#custom-updates {
+  padding: 0 15px;
 }
 
 #window,
