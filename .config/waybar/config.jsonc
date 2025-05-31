@@ -27,7 +27,8 @@
         "exec": "$HOME/.config/waybar/custom/updates/updates.sh",
         "on-click": "kitty $HOME/.config/waybar/custom/updates/updateall.sh",
         "restart-interval": 60,
-        "format": "{text} ↑"
+        "signal": 7,
+        "format": "{text} ↑",
         "hide-empty-text": true
     },
     "hyprland/workspaces": {
