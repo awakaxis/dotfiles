@@ -28,6 +28,7 @@
         "on-click": "kitty $HOME/.config/waybar/custom/updates/updateall.sh",
         "restart-interval": 60,
         "format": "{text} ↑"
+        "hide-empty-text": true
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
