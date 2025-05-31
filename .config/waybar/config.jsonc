@@ -24,8 +24,8 @@
         "custom/power"
     ],
     "custom/updates": {
-        "exec": "/home/$USER/.config/waybar/custom/updates/updates.sh",
-        "on-click": "kitty /home/$USER/.config/waybar/custom/updates/updateall.sh",
+        "exec": "$HOME/.config/waybar/custom/updates/updates.sh",
+        "on-click": "kitty $HOME/.config/waybar/custom/updates/updateall.sh",
         "restart-interval": 60,
         "format": "{text} ↑"
     },
