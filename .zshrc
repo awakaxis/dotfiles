@@ -21,7 +21,6 @@ alias hyprpicker='hyprpicker | grep -P "#\w{6}" | wlc'
 
 # vim shortcuts
 alias vim='nvim'
-alias vimconf='cd ~/.config/nvim; vim'
 alias vimrc='vim ~/.zshrc'
 alias vimhypr='vim ~/.config/hypr/hyprland.conf'
 alias vimte='vim ~/.config/kitty/kitty.conf'
