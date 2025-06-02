@@ -79,6 +79,17 @@ return {
 			},
 		})
 
+		local function get_python_path()
+			local cwd = vim.fn.getcwd()
+			for _, venv in ipairs({ ".venv", "venv", "env" }) do
+				local python = cwd .. "/" .. venv .. "/bin/python"
+				if vim.fn.executable(python) == 1 then
+					return python
+				end
+			end
+			return nil
+		end
+
 		local servers = {
 			lua_ls = {
 				settings = {
@@ -96,8 +107,8 @@ return {
 				settings = {
 					python = {
 						venvPath = ".",
-						venv = "venv",
-						pythonPath = "./venv/bin/python",
+						venv = ".venv",
+						pythonPath = get_python_path(),
 						analysis = {
 							autoSearchPaths = true,
 							useLibraryCodeForTypes = true,
