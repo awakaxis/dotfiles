@@ -25,7 +25,7 @@
     ],
     "custom/updates": {
         "exec": "$HOME/.config/waybar/custom/updates/updates.sh",
-        "on-click": "kitty $HOME/.config/waybar/custom/updates/updateall.sh",
+        "on-click": "hyprctl keyword exec '$middleify kitty $HOME/.config/waybar/custom/updates/updateall.sh'",
         "restart-interval": 60,
         "signal": 7,
         "format": "{text} ",
