@@ -40,6 +40,7 @@ map.set("n", "<leader>ee", function()
 end, { desc = "Open file explorer" })
 
 -- MISCELLANEOUS
+map.set("n", "<leader>aa", vim.cmd.Alpha, { desc = "Main Menu" })
 
 map.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
 
