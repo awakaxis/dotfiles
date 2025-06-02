@@ -68,8 +68,6 @@ return {
 			end,
 		})
 
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-
 		vim.diagnostic.config({
 			signs = {
 				text = {
@@ -78,12 +76,6 @@ return {
 					[vim.diagnostic.severity.HINT] = "󰠠 ",
 					[vim.diagnostic.severity.INFO] = " ",
 				},
-				-- linehl = {
-				-- 	[vim.diagnostic.severity.ERROR] = "ErrorMsg",
-				-- },
-				--             numhl = {
-				--
-				--             }
 			},
 		})
 
@@ -121,6 +113,8 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = vim.tbl_keys(servers),
 		})
+
+		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		for server, config in pairs(servers) do
 			config.capabilities = capabilities
