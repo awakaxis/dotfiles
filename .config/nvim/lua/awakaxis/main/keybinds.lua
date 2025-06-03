@@ -2,6 +2,15 @@ vim.g.mapleader = " "
 
 local map = vim.keymap
 
+local function try_run_project()
+	local cwd = vim.fn.getcwd()
+	local CMD = "kitty --working-directory %s zsh -ic '%s'"
+
+	if vim.fn.filereadable(cwd .. "/main.py") == 1 then
+		os.execute(string.format(CMD, cwd, "venvpy main.py"))
+	end
+end
+
 -- PICKER
 map.set("n", "<leader>ff", function()
 	require("snacks.picker").files({ exclude = { "Documents/custom" } })
@@ -74,3 +83,5 @@ map.set("n", "n", "nzz", { desc = "Keep camera centered" })
 map.set("n", "N", "Nzz", { desc = "Keep camera centered" })
 
 map.set("x", "<leader>p", '"_dP', { desc = "Paste w/o copy" })
+
+map.set("n", "<leader><CR>", try_run_project, { desc = "Try to run the current project if applicable" })
