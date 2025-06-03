@@ -20,7 +20,7 @@ map.set("v", "<leader>fw", function()
 end, { desc = "Search for selection" })
 
 map.set("n", "<leader>ft", function()
-	require("snacks.picker").todo_comments()
+	require("snacks.picker").diagnostics()
 end, { desc = "View Todos" })
 
 map.set("n", "<leader>fr", function()
