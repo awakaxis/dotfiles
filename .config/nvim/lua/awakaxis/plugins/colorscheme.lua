@@ -22,6 +22,11 @@ return {
 		vim.api.nvim_set_hl(0, "@operator", { link = "GruvboxFg1" })
 		vim.api.nvim_set_hl(0, "@module", { link = "GruvboxFg1" })
 
+		vim.api.nvim_set_hl(0, "BufferLineSeparator", { fg = "#282828", bg = "none" })
+
+		vim.api.nvim_set_hl(0, "BufferLineFill", { fg = "fg", bg = "#282828" })
+		vim.api.nvim_set_hl(0, "TabLineFill", { fg = "fg", bg = "#282828" })
+
 		-- java
 		vim.api.nvim_set_hl(0, "@type.java", { link = "Type" })
 		vim.api.nvim_set_hl(0, "@constant.java", { link = "Purple" })
