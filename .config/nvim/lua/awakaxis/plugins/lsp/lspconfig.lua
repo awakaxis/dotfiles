@@ -118,9 +118,13 @@ return {
 			},
 			html = {},
 			cssls = {},
+			jdtls = {},
 		}
 
 		mason_lspconfig.setup({
+			automatic_enable = {
+				exclude = { "jdtls" },
+			},
 			ensure_installed = vim.tbl_keys(servers),
 		})
 
