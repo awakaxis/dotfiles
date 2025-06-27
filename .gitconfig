@@ -1,0 +1,7 @@
+[user]
+	email = awakaxis@gmail.com
+	name = awakaxis
+[core]
+	editor = nvim
+[pull]
+	rebase = false
