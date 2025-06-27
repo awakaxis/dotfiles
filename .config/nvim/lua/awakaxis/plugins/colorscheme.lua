@@ -5,21 +5,30 @@ return {
 		vim.cmd("colorscheme gruvbox-material")
 
 		require("gruvbox-material").setup({
-			contrast = "hard",
+			contrast = "medium",
 			background = {
 				transparent = true,
 			},
 		})
 
-		vim.api.nvim_set_hl(0, "@variable.python", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@variable.member.python", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@function.method.call.python", { link = "Green" })
-		vim.api.nvim_set_hl(0, "@constant.builtin.python", { link = "Red" })
-		vim.api.nvim_set_hl(0, "@constant.python", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@variable.parameter.python", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@type.python", { link = "Green" })
-		vim.api.nvim_set_hl(0, "@type.builtin.python", { link = "Red" })
-		vim.api.nvim_set_hl(0, "@operator.python", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@module.python", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@variable", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@variable.member", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@function.method.call", { link = "Green" })
+		vim.api.nvim_set_hl(0, "@constant.builtin", { link = "Red" })
+		vim.api.nvim_set_hl(0, "@constant", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@variable.parameter", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@type", { link = "Green" })
+		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Red" })
+		vim.api.nvim_set_hl(0, "@operator", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@module", { link = "GruvboxFg1" })
+
+		-- java
+		vim.api.nvim_set_hl(0, "@type.java", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@constant.java", { link = "Purple" })
+		vim.api.nvim_set_hl(0, "@lsp.type.modifier.java", { link = "Red" })
+		vim.api.nvim_set_hl(0, "@lsp.type.class.java", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@lsp.typemod.property.readonly.java", { link = "Purple" })
+		vim.api.nvim_set_hl(0, "@lsp.type.interface.java", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@lsp.type.property.java", { link = "GruvboxFg1" })
 	end,
 }
