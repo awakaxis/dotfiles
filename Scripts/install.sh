@@ -18,15 +18,14 @@ for file in $(find .); do
 
     realfile="$(pwd)${file:1}"
     dest="${HOME}${file:1}"
-    # echo "dest: ${dest}"
 
-    if [ -d $realfile ]; then
-        if [ ! -d $dest ]; then
+    if [[ -d $realfile ]]; then
+        if [[ ! -d $dest ]]; then
             echo "Creating  ${dest}  because it does not exist"
             mkdir $dest
         fi
     else
-       if [ -f $dest ]; then
+       if [[ -f $dest ]]; then
            echo "File exists: $dest"
            read "VAL?Do you want to replace this file? [Y/n]: "
            if [[ -z $VAL || $VAL == [Yy] ]]; then
