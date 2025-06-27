@@ -4,10 +4,23 @@ local map = vim.keymap
 
 local function try_run_project()
 	local cwd = vim.fn.getcwd()
-	local CMD = "kitty --working-directory %s zsh -ic '%s'"
+	local CMD = "kitty --working-directory %s zsh -ic '%s; read -k1 \"?Press any key to exit...\"'"
+	local filename = vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf())
 
-	if vim.fn.filereadable(cwd .. "/main.py") == 1 then
-		os.execute(string.format(CMD, cwd, "venvpy main.py"))
+	if vim.endswith(filename, ".sh") then
+		vim.fn.jobstart(string.format(CMD, cwd, filename))
+	elseif vim.fn.filereadable(cwd .. "/main.py") == 1 then
+		vim.fn.jobstart(string.format(CMD, cwd, "venvpy main.py"))
+	elseif vim.fn.filereadable(cwd .. "/build.gradle") == 1 then
+		local file = io.open(cwd .. "/build.gradle", "r")
+		assert(file ~= nil, "File is nil")
+		local content = file:read("*a")
+		if content:find("fabric-loom", 1, true) ~= nil then
+			vim.fn.jobstart(string.format(CMD, cwd, "./gradlew runClient"))
+		else
+			vim.notify("bad", vim.log.levels.INFO)
+			return
+		end
 	end
 end
 
