@@ -28,7 +28,7 @@
         "on-click": "hyprctl keyword exec '$middleify kitty $HOME/.config/waybar/custom/updates/updateall.sh'",
         "restart-interval": 60,
         "signal": 7,
-        "format": "{text} ",
+        "format": "{text}  ",
         "hide-empty-text": true
     },
     "hyprland/workspaces": {
