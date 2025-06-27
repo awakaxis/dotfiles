@@ -53,6 +53,10 @@ map.set("n", "<leader>qf", function()
 	require("snacks.picker").qflist()
 end, { desc = " Quickfix" })
 
+map.set("n", "<leader>fe", function()
+	require("snacks.picker").lsp_workspace_symbols()
+end, { desc = "Search Everywhere" })
+
 map.set("n", "<C-q>", function()
 	require("snacks.picker.actions").qflist()
 end, { desc = "Send to Quickfix" })
