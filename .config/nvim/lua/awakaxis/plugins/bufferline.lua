@@ -9,6 +9,7 @@ return {
 			indicator = {
 				style = "underline",
 			},
+			auto_toggle_bufferline = false,
 			max_name_length = 30,
 			-- diagnostics = "nvim_lsp",
 			-- diagnostics_indicator = function(count, level, diagnostics_dict, context)
