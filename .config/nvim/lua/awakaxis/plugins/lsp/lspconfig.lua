@@ -91,6 +91,19 @@ return {
 
 		local servers = {
 			lua_ls = {
+				cmd = { "lua-language-server" },
+				filetypes = { "lua" },
+				root_markers = {
+					".luarc.json",
+					".luarc.jsonc",
+					".luacheckrc",
+					".stylua.toml",
+					"stylua.toml",
+					"selene.toml",
+					"selene.yml",
+					"init.lua",
+					".git",
+				},
 				settings = {
 					Lua = {
 						diagnostics = {
