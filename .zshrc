@@ -11,6 +11,7 @@ export EDITOR='nvim'
 alias poweroff='systemctl poweroff'
 
 alias ls='ls --color=auto'
+alias lsa='ls -a'
 alias grep='grep --color=auto'
 
 alias wlc='wl-copy'
