@@ -6,9 +6,6 @@ return {
 
 		require("gruvbox-material").setup({
 			contrast = "medium",
-			background = {
-				transparent = false,
-			},
 		})
 
 		vim.api.nvim_set_hl(0, "@variable", { link = "GruvboxFg1" })

@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local map = vim.keymap
 
-local transparencyFlag = false
+local transparencyFlag = true
 
 local function try_run_project()
 	local cwd = vim.fn.getcwd()
