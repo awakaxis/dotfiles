@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 local map = vim.keymap
 
+local transparencyFlag = false
+
 local function try_run_project()
 	local cwd = vim.fn.getcwd()
 	local CMD = "kitty --working-directory %s zsh -ic '%s; read -k1 \"?Press any key to exit...\"'"
@@ -22,6 +24,26 @@ local function try_run_project()
 			return
 		end
 	end
+end
+
+function ToggleTransparency()
+	local Normal = "#282828"
+	local NonText = "#5a524c"
+	local EndOfBuffer = "#282828"
+	local NormalFloat = "#45403d"
+
+	if transparencyFlag == false then
+		vim.cmd.hi("Normal", "guibg=none")
+		vim.cmd.hi("NonText", "guibg=none")
+		vim.cmd.hi("EndOfBuffer", "guibg=none")
+		vim.cmd.hi("NormalFloat", "guibg=none")
+	else
+		vim.cmd.hi("Normal", "guibg=" .. Normal)
+		vim.cmd.hi("NonText", "guibg=" .. NonText)
+		vim.cmd.hi("EndOfBuffer", "guibg=" .. EndOfBuffer)
+		vim.cmd.hi("NormalFloat", "guibg=" .. NormalFloat)
+	end
+	transparencyFlag = not transparencyFlag
 end
 
 -- PICKER
@@ -102,3 +124,5 @@ map.set("n", "N", "Nzz", { desc = "Keep camera centered" })
 map.set("x", "<leader>p", '"_dP', { desc = "Paste w/o copy" })
 
 map.set("n", "<leader><CR>", try_run_project, { desc = "Try to run the current project if applicable" })
+
+map.set("n", "<leader>tp", ToggleTransparency, { desc = "Toggle background transparency" })

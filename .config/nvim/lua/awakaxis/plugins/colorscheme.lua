@@ -7,7 +7,7 @@ return {
 		require("gruvbox-material").setup({
 			contrast = "medium",
 			background = {
-				transparent = true,
+				transparent = false,
 			},
 		})
 
