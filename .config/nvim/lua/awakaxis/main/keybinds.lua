@@ -111,8 +111,8 @@ map.set("v", "<leader>d", '"_d', { desc = "Delete to void" })
 
 map.set("n", "<leader>tt", vim.cmd.tabnew, { desc = "Open new tab" })
 map.set("n", "<leader>tx", vim.cmd.tabclose, { desc = "Close current tab" })
-map.set("n", "<leader>tr", vim.cmd.tabn, { desc = "Go to next tab" })
-map.set("n", "<leader>tp", vim.cmd.tabp, { desc = "Go to previous tab" })
+map.set("n", "<leader>tn", vim.cmd.tabn, { desc = "Go to next tab" })
+map.set("n", "<leader>tr", vim.cmd.tabp, { desc = "Go to previous tab" })
 map.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 map.set("n", "J", "mzJ`z", { desc = "Keep camera centered" })
