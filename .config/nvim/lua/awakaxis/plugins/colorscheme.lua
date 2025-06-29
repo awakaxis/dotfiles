@@ -20,7 +20,7 @@ return {
 		vim.api.nvim_set_hl(0, "@constant.builtin", { link = "Red" })
 		vim.api.nvim_set_hl(0, "@constant", { link = "GruvboxFg1" })
 		vim.api.nvim_set_hl(0, "@variable.parameter", { link = "GruvboxFg1" })
-		vim.api.nvim_set_hl(0, "@type", { link = "Green" })
+		vim.api.nvim_set_hl(0, "@type", { link = "Yellow" })
 		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Red" })
 		vim.api.nvim_set_hl(0, "@operator", { link = "GruvboxFg1" })
 		vim.api.nvim_set_hl(0, "@module", { link = "GruvboxFg1" })
