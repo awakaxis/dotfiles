@@ -43,9 +43,7 @@ local bundles = {
 -- Needed for running/debugging unit tests
 vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.local/share/nvim/mason/share/java-test/*.jar", 1), "\n"))
 
--- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
-	-- https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
 	cmd = {
 		"java",
 		"-Declipse.application=org.eclipse.jdt.ls.core.id1",
@@ -70,8 +68,6 @@ local config = {
 		workspace_dir,
 	},
 
-	-- This is the default if not provided, you can remove it. Or adjust as needed.
-	-- One dedicated LSP server & client will be started per unique root_dir
 	root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "pom.xml", "build.gradle" }),
 
 	-- Here you can configure eclipse.jdt.ls specific settings
@@ -171,6 +167,24 @@ local config = {
 		-- References the bundles defined above to support Debugging and Unit Testing
 		bundles = bundles,
 		extendedClientCapabilities = jdtls.extendedClientCapabilities,
+		settings = {
+			java = {
+				imports = {
+					gradle = {
+						enabled = true,
+						wrapper = {
+							enabled = true,
+							checksums = {
+								{
+									sha256 = "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
+									allowed = true,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
 	},
 }
 
@@ -180,10 +194,4 @@ local config = {
 -- 	require("jdtls.dap").setup_dap_main_class_configs()
 -- end
 
--- This starts a new client & server, or attaches to an existing client & server based on the `root_dir`.
 jdtls.start_or_attach(config)
-
--- -- disable checksums on gradle wrappers if its one of my minecraft mods
--- if vim.startswith(vim.fn.getcwd(), "/home/awakaxis/Dev/minecraft") then
--- 	config.init_options.settings.java.imports.gradle.wrapper.checksums["*"] = { allowed = true }
--- end
