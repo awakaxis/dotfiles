@@ -126,6 +126,9 @@ return {
 							useLibraryCodeForTypes = true,
 							diagnosticMode = "workspace",
 							typeCheckingMode = "off",
+							diagnosticSeverityOverrides = {
+								reportOptionalMemberAccess = false,
+							},
 						},
 					},
 				},
