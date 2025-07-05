@@ -28,9 +28,9 @@ end
 
 function ToggleTransparency()
 	local Normal = "#282828"
-	local NonText = "#5a524c"
+	local NonText = "none"
 	local EndOfBuffer = "#282828"
-	local NormalFloat = "#322d2a"
+	local NormalFloat = "#282828"
 
 	if transparencyFlag == false then
 		vim.cmd.hi("Normal", "guibg=none")
