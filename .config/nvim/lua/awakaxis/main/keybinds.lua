@@ -28,7 +28,7 @@ end
 
 function ToggleTransparency()
 	local Normal = "#282828"
-	local NonText = "none"
+	local NonText = "#282828"
 	local EndOfBuffer = "#282828"
 	local NormalFloat = "#282828"
 

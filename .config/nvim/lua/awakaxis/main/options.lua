@@ -43,6 +43,9 @@ opt.updatetime = 50
 
 opt.colorcolumn = "80"
 
+-- disable end of buffer tilde
+opt.fillchars = "eob:"
+
 vim.api.nvim_create_user_command("Redir", function(ctx)
 	-- vim.cmd("redir => g:__capture_output | silent ! " .. ctx.args .. " | redir END")
 	vim.cmd("redir => g:__capture_output")
