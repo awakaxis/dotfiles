@@ -5,7 +5,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
         "network",
-        "pulseaudio"
+        "pulseaudio",
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -16,10 +16,10 @@
         "cpu",
         "memory",
         "temperature",
-        "hyprland/language",
         "battery",
         "battery#bat2",
         "clock",
+        "custom/language",
         "tray"
         // "custom/power"
     ],
@@ -30,6 +30,12 @@
         "signal": 7,
         "format": "{text}  ",
         "hide-empty-text": true
+    },
+    "custom/language": {
+        "exec": "$HOME/.config/waybar/custom/language/display.sh",
+        "on-click": "$HOME/.config/hypr/scripts/scroll_ibus.sh",
+        "signal": 8,
+        "format": "{text}",
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
