@@ -37,11 +37,13 @@ function ToggleTransparency()
 		vim.cmd.hi("NonText", "guibg=none")
 		vim.cmd.hi("EndOfBuffer", "guibg=none")
 		vim.cmd.hi("NormalFloat", "guibg=none")
+		vim.cmd.hi("Search", "guifg=#282828", "guibg=#a9b665")
 	else
 		vim.cmd.hi("Normal", "guibg=" .. Normal)
 		vim.cmd.hi("NonText", "guibg=" .. NonText)
 		vim.cmd.hi("EndOfBuffer", "guibg=" .. EndOfBuffer)
 		vim.cmd.hi("NormalFloat", "guibg=" .. NormalFloat)
+		vim.cmd.hi("Search", "guibg=#343434", "guifg=#b9b9b9")
 	end
 	transparencyFlag = not transparencyFlag
 end
