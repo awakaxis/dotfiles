@@ -6,12 +6,12 @@
     "modules-left": [
         "network",
         "pulseaudio",
+        "custom/updates",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "custom/updates",
         // "idle_inhibitor",
         "cpu",
         "memory",
