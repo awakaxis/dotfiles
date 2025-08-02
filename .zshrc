@@ -7,6 +7,7 @@ fi
 
 PS1='%F{#EFEBD9}%n%f@%F{#EFEBD9}%M -> %U%2~%u %f'$'\n'' $ '
 export EDITOR='nvim'
+export GLFW_IM_MODULE=ibus
 
 alias poweroff='systemctl poweroff'
 
