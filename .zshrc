@@ -27,7 +27,7 @@ alias litecli='litecli --auto-vertical-output'
 # vim shortcuts
 alias vim='nvim'
 alias vimrc='vim ~/.zshrc'
-alias vimhypr='vim ~/.config/hypr/hyprland.conf'
+alias vimhypr='cd ~/.config/hypr/ && vim hyprland.conf'
 alias vimte='vim ~/.config/kitty/kitty.conf'
 
 # fzf
