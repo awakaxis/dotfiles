@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 hyprctl clients -j | jq -r '.[] | "\(.title) [\(.class)] (\(.address))"' |\
     wofi -d -bi --prompt 'Open Windows:' | grep -oP '\(\K[^)]+' |\
