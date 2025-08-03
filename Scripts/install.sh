@@ -1,5 +1,11 @@
 #!/usr/bin/zsh
 
+ONLYNEW=0
+
+if [[ $1 == "-n" ]]; then
+    ONLYNEW=1
+fi
+
 echo "Looking for dotfiles to link out from the CWD ($(pwd))\nBackups will be created in $(pwd)/backups/"
 read -k1 "?press any key to continue..."
 
@@ -26,6 +32,9 @@ for file in $(find .); do
         fi
     else
        if [[ -f $dest ]]; then
+           if [[ $ONLYNEW == 1 ]]; then
+               continue
+           fi
            echo "File exists: $dest"
            read "VAL?Do you want to replace this file? [Y/n]: "
            if [[ -z $VAL || $VAL == [Yy] ]]; then
