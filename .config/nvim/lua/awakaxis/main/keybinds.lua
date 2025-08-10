@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local map = vim.keymap
 
-local transparencyFlag = true
+local transparencyEnabled = true
 
 local function try_run_project()
 	local cwd = vim.fn.getcwd()
@@ -32,20 +32,18 @@ function ToggleTransparency()
 	local EndOfBuffer = "#282828"
 	local NormalFloat = "#282828"
 
-	if transparencyFlag == false then
+	if transparencyEnabled == false then
 		vim.cmd.hi("Normal", "guibg=none")
 		vim.cmd.hi("NonText", "guibg=none")
 		vim.cmd.hi("EndOfBuffer", "guibg=none")
 		vim.cmd.hi("NormalFloat", "guibg=none")
-		vim.cmd.hi("Search", "guifg=#282828", "guibg=#a9b665")
 	else
 		vim.cmd.hi("Normal", "guibg=" .. Normal)
 		vim.cmd.hi("NonText", "guibg=" .. NonText)
 		vim.cmd.hi("EndOfBuffer", "guibg=" .. EndOfBuffer)
 		vim.cmd.hi("NormalFloat", "guibg=" .. NormalFloat)
-		vim.cmd.hi("Search", "guibg=#343434", "guifg=#b9b9b9")
 	end
-	transparencyFlag = not transparencyFlag
+	transparencyEnabled = not transparencyEnabled
 end
 
 -- PICKER

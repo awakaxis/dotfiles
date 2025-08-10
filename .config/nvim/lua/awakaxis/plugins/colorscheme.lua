@@ -14,6 +14,7 @@ return {
 		vim.cmd.hi("EndOfBuffer", "guibg=none")
 		vim.cmd.hi("NormalFloat", "guibg=none")
 		vim.cmd.hi("CurSearch", "guibg=#492933")
+		vim.cmd.hi("Search", "guibg=#343434", "guifg=#b9b9b9")
 
 		vim.api.nvim_set_hl(0, "@variable", { link = "GruvboxFg1" })
 		vim.api.nvim_set_hl(0, "@variable.member", { link = "GruvboxFg1" })
