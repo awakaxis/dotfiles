@@ -20,7 +20,7 @@ alias cls='clear'
 alias rsource='source ~/.zshrc'
 alias venvpy='.venv/bin/python'
 alias hyprpicker='hyprpicker | grep -P "#\w{6}" | wlc'
-alias ff='fastfetch'
+alias ff='cls && fastfetch'
 alias fortsai='cbonsai -li -t 0.05 -L 32 -M 10 -w 10 -m "$(fortune)"'
 
 alias litecli='litecli --auto-vertical-output'
@@ -53,7 +53,7 @@ export BAT_THEME="gruvbox-dark"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-ff
+fastfetch
 
 # Created by `pipx` on 2025-05-12 19:07:26
 export PATH="$PATH:/home/awakaxis/.local/bin"
