@@ -1,0 +1,8 @@
+app.zen_browser.zen
+org.freedesktop.Platform
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL.default
+org.freedesktop.Platform.GL.nvidia-570-144
+org.freedesktop.Platform.VAAPI.Intel
+org.freedesktop.Platform.ffmpeg-full
+org.freedesktop.Platform.openh264
