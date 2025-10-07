@@ -40,5 +40,6 @@ return {
 		vim.api.nvim_set_hl(0, "@lsp.typemod.property.readonly.java", { link = "Purple" })
 		vim.api.nvim_set_hl(0, "@lsp.type.interface.java", { link = "Type" })
 		vim.api.nvim_set_hl(0, "@lsp.type.property.java", { link = "GruvboxFg1" })
+		vim.api.nvim_set_hl(0, "@variable.builtin.java", { link = "Red" })
 	end,
 }

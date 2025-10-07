@@ -17,7 +17,7 @@ local function try_run_project()
 		local file = io.open(cwd .. "/build.gradle", "r")
 		assert(file ~= nil, "File is nil")
 		local content = file:read("*a")
-		if content:find("fabric-loom", 1, true) ~= nil then
+		if content:find("fabric-loom", 1, true) ~= nil or content:find("neoforge", 1, true) ~= nil then
 			vim.fn.jobstart(string.format(CMD, cwd, "./gradlew runClient"))
 		else
 			vim.notify("bad", vim.log.levels.INFO)
