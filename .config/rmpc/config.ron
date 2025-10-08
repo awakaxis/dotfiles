@@ -130,7 +130,7 @@
                         direction: Vertical,
                         panes: [
                             (size: "50%", pane: Pane(AlbumArt)),
-                            (size: "50%", pane: Pane(Cava)),
+                            // (size: "50%", pane: Pane(Cava)),
                         ],
                     )),
                     (size: "60%", pane: Pane(Queue)),
