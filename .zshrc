@@ -17,7 +17,7 @@ alias grep='grep --color=auto'
 
 alias wlc='wl-copy'
 alias cls='clear'
-alias rsource='source ~/.zshrc'
+alias rsource='cls && source ~/.zshrc'
 alias venvpy='.venv/bin/python'
 alias hyprpicker='hyprpicker | grep -P "#\w{6}" | wlc'
 alias ff='cls && fastfetch'
