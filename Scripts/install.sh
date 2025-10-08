@@ -36,8 +36,8 @@ for file in $(find .); do
                continue
            fi
            echo "File exists: $dest"
-           read "VAL?Do you want to replace this file? [Y/n]: "
-           if [[ -z $VAL || $VAL == [Yy] ]]; then
+           read "VAL?Do you want to replace this file? [y/N]: "
+           if [[ $VAL == [Yy] ]]; then
                echo "Replacing..."
                bakfile="$BACKUPS${dest/${HOME}\//}.bak"
                mkdir -p $(dirname $bakfile)
