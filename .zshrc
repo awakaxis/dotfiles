@@ -31,6 +31,11 @@ alias vimrc='vim ~/.zshrc'
 alias vimhypr='cd ~/.config/hypr/ && vim hyprland.conf'
 alias vimte='vim ~/.config/kitty/kitty.conf'
 
+mkcd() {
+    mkdir $1
+    cd $1
+};
+
 # fzf
 eval "$(fzf --zsh)"
 
