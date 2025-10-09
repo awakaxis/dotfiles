@@ -16,8 +16,8 @@ return {
 					require("snacks.explorer").open()
 				end
 			end
-			vim.cmd.SessionRestore()
+			vim.cmd.AutoSession("restore")
 		end, { desc = "Restore session for cwd" })
-		map.set("n", "<leader>ws", vim.cmd.SessionSave, { desc = "Save session for auto session root dir" })
+		map.set("n", "<leader>ws", vim.cmd.AutoSession("save"), { desc = "Save session for auto session root dir" })
 	end,
 }

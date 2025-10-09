@@ -27,8 +27,8 @@ return {
 			dashboard.button("SPC fs", "  > Find Word", function()
 				require("snacks.picker").grep()
 			end),
-			dashboard.button("c", "  > Open Config", ":cd ~/.dotfiles/.config/nvim/<CR> | :SessionRestore<CR>"),
-			dashboard.button("SPC wr", "󰁯  > Restore Session For CWD", "<cmd>SessionRestore<CR>"),
+			dashboard.button("c", "  > Open Config", ":cd ~/.dotfiles/.config/nvim/<CR> | :AutoSession restore<CR>"),
+			dashboard.button("SPC wr", "󰁯  > Restore Session For CWD", "<cmd>AutoSession restore<CR>"),
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
