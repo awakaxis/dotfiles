@@ -136,6 +136,7 @@ return {
 			html = {},
 			cssls = {},
 			jdtls = {},
+			qmlls = {},
 		}
 
 		mason_lspconfig.setup({
