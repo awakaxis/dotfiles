@@ -59,7 +59,17 @@ export BAT_THEME="gruvbox-dark"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-fastfetch
-
 # Created by `pipx` on 2025-05-12 19:07:26
 export PATH="$PATH:/home/awakaxis/.local/bin"
+
+export PINGME_ADDRESS=192.168.1.16
+export PINGME_PORT=25657
+export PINGME_FORMAT="\`%cmd\` finished in \`%dur\`"
+export PINGME_USER_ID=424752785142317066
+
+preexec() {
+    export PINGME_TIMESTAMP=$(date +%s)
+    export PINGME_CMD=${1% |*}
+}
+
+fastfetch
