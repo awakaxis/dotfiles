@@ -22,6 +22,7 @@ alias venvpy='.venv/bin/python'
 alias hyprpicker='hyprpicker | grep -P "#\w{6}" | wlc'
 alias ff='cls && fastfetch'
 alias fortsai='cbonsai -li -t 0.05 -L 32 -M 10 -w 10 -m "$(fortune)"'
+alias myip="curl -s -w \"\n\" ipinfo.io/ip | wlc"
 
 alias litecli='litecli --auto-vertical-output'
 
