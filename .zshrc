@@ -64,7 +64,7 @@ export PATH="$PATH:/home/awakaxis/.local/bin"
 
 export PINGME_ADDRESS=192.168.1.16
 export PINGME_PORT=25657
-export PINGME_FORMAT="\`%cmd\` finished in \`%dur\`"
+export PINGME_FORMAT="\`%usr@%hst %cwd\` finished \`%cmd\` in \`%dur\`"
 export PINGME_USER_ID=424752785142317066
 
 preexec() {
