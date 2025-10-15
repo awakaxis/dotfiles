@@ -54,6 +54,7 @@ _fzf_compgen_dir() {
 
 # bat
 export BAT_THEME="gruvbox-dark"
+alias cat=bat
 
 # zoxide
 eval "$(zoxide init zsh)"
