@@ -25,6 +25,7 @@
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
         horizontal_align: Center,
+        default_album_art_path: "/home/awakaxis/Pictures/music_thumbnails/",
     ),
     keybinds: (
         global: {
