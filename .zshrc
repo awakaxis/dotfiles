@@ -24,6 +24,18 @@ alias ff='cls && fastfetch'
 alias fortsai='cbonsai -li -t 0.05 -L 32 -M 10 -w 10 -m "$(fortune)"'
 alias myip="curl -s -w \"\n\" ipinfo.io/ip | wlc"
 
+ytdlp ()
+{
+    if [[ -z $1 || ( $1 != "music" && $1 != "video" ) ]]; then
+        echo "Usage: ytdlp [music, video] [args...]"
+        echo "Shortcut for music or video presets for yt-dlp."
+        return
+    fi
+    if [[ $1 == "music" ]]; then
+        yt-dlp $2 -x --embed-thumbnail --write-thumbnail --embed-metadata --write-subs --sub-langs 'en,ja' --convert-subs lrc -o '/home/awakaxis/Music/ytdlp/%(channel)s/%(title)s/%(title)s.%(ext)s' -o 'thumbnail:/home/awakaxis/Pictures/music_thumbnails/%(title)s.%(ext)s'
+    fi
+}
+
 alias litecli='litecli --auto-vertical-output'
 
 # vim shortcuts
