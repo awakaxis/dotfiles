@@ -10,4 +10,4 @@ hyprctl clients -j | jq -r '.[] | "\(.title)"' | while IFS= read -r title; do
     fi
 done
 
-hyprctl "dispatch exec [workspace 5] kitty rmpc"
+hyprctl 'dispatch exec [workspace 5] kitty rmpc'
