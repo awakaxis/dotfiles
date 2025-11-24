@@ -9,6 +9,9 @@ window {
   padding: 5px;
   font-size: 20px;
   font-family: JetBrainsMonoNerdFont;
+  border-bottom: 3px solid #282828;
+  background-color: #2d2d2d;
+  margin-bottom: 5px;
 }
 
 #entry:selected {
