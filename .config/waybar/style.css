@@ -133,9 +133,13 @@ label:focus {
   background-color: #90b1b1;
 }
 
+#network {
+  border-bottom: 2 solid #56863a;
+}
+
 /*TODO: do disconnected color*/
 #network.disconnected {
-  background-color: #f53c3c;
+  border-bottom: 2 solid #f53c3c;
 }
 
 #pulseaudio.muted {
