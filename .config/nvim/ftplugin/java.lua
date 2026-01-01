@@ -55,7 +55,7 @@ local config = {
 	settings = {
 		java = {
 			-- TODO Replace this with the absolute path to your main java version (JDTLS requires JDK 21 or higher)
-			home = "/usr/lib/jvm/java-21-openjdk",
+			home = "/usr/lib/jvm/java-25-openjdk",
 			eclipse = {
 				downloadSources = true,
 			},
@@ -83,6 +83,10 @@ local config = {
 					{
 						name = "JavaSE-21",
 						path = "/usr/lib/jvm/java-21-openjdk",
+					},
+					{
+						name = "JavaSE-25",
+						path = "/usr/lib/jvm/java-25-openjdk",
 					},
 				},
 			},
