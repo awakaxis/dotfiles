@@ -45,27 +45,7 @@ vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.local/share/nvim/mason
 
 local config = {
 	cmd = {
-		"java",
-		"-Declipse.application=org.eclipse.jdt.ls.core.id1",
-		"-Dosgi.bundles.defaultStartLevel=4",
-		"-Declipse.product=org.eclipse.jdt.ls.core.product",
-		"-Dlog.protocol=true",
-		"-Dlog.level=ALL",
-		"-javaagent:" .. home .. "/.local/share/nvim/mason/share/jdtls/lombok.jar",
-		"-Xmx4g",
-		"--add-modules=ALL-SYSTEM",
-		"--add-opens",
-		"java.base/java.util=ALL-UNNAMED",
-		"--add-opens",
-		"java.base/java.lang=ALL-UNNAMED",
-
-		-- Eclipse jdtls location
-		"-jar",
-		home .. "/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher.jar",
-		"-configuration",
-		home .. "/.local/share/nvim/mason/packages/jdtls/config_" .. system_os,
-		"-data",
-		workspace_dir,
+		home .. "/.local/share/nvim/mason/bin/jdtls",
 	},
 
 	root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "pom.xml", "build.gradle" }),
