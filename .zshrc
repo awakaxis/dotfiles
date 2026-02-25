@@ -26,6 +26,11 @@ alias fortsai='cbonsai -li -t 0.05 -L 32 -M 10 -w 10 -m "$(fortune)"'
 alias myip="curl -s -w \"\n\" ipinfo.io/ip | wlc"
 alias windows="sudo grub-reboot 2 && reboot"
 
+cwall ()
+{
+    hyprctl hyprpaper wallpaper ",/home/awakaxis/wallpapers/$1"
+}
+
 ytdlp ()
 {
     if [[ -z $1 || ( $1 != "music" && $1 != "video" ) ]]; then
