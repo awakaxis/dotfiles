@@ -23,6 +23,8 @@ local function try_run_project()
 			vim.notify("bad", vim.log.levels.INFO)
 			return
 		end
+	elseif vim.fn.filereadable(cwd .. "/index.html") == 1 then
+		vim.fn.jobstart("firefox ./index.html")
 	end
 end
 
@@ -87,6 +89,35 @@ end, { desc = "Send to Quickfix" })
 map.set("n", "<leader>ee", function()
 	require("snacks.explorer").open()
 end, { desc = "Open file explorer" })
+
+-- LSP
+map.set("n", "gR", function()
+	require("snacks.picker").lsp_references()
+end, { desc = "Show LSP references" })
+
+map.set("n", "gd", function()
+	require("snacks.picker").lsp_definitions()
+end, { desc = "Show LSP definitions" })
+
+map.set("n", "gi", function()
+	require("snacks.picker").lsp_implementations()
+end, { desc = "Show LSP implementations" })
+
+map.set("n", "gt", function()
+	require("snacks.picker").lsp_type_definitions()
+end, { desc = "Show LSP type definitions" })
+
+map.set("n", "rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
+map.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+
+map.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+
+map.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
+
+map.set("n", "<leader>DD", function()
+	require("snacks.picker").diagnostics_buffer()
+end, { desc = "Show buffer diagnostics" })
 
 -- MISCELLANEOUS
 map.set("n", "<leader>aa", vim.cmd.Alpha, { desc = "Main Menu" })

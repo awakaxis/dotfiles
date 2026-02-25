@@ -46,6 +46,8 @@ opt.colorcolumn = "80"
 -- disable end of buffer tilde
 opt.fillchars = "eob:"
 
+opt.mousemodel = "extend"
+
 vim.api.nvim_create_user_command("Redir", function(ctx)
 	-- vim.cmd("redir => g:__capture_output | silent ! " .. ctx.args .. " | redir END")
 	vim.cmd("redir => g:__capture_output")
